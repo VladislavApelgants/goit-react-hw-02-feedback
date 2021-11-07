@@ -1,9 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 import s from './FeedbackOptions.module.scss';
+import PropTypes from 'prop-types';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div className="feedback__button-container">
+    <div>
       {options.map(elem => (
         <button
           key={uuidv4()}
@@ -18,3 +19,8 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
+};

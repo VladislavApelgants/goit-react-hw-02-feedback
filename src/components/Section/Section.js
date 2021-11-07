@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import s from './Section.module.scss';
-import Statistics from '../Statistics/Statistics';
-import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
-import Notification from '../Notification/Notification';
+import PropTypes from 'prop-types';
+import Statistics from '../Statistics';
+import FeedbackOptions from '../FeedbackOptions';
+import Notification from '../Notification';
 
 class Section extends Component {
   state = {
@@ -69,5 +70,9 @@ class Section extends Component {
     );
   }
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+};
 
 export default Section;

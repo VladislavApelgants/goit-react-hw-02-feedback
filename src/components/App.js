@@ -1,4 +1,4 @@
-import Section from './feedback/Section/Section';
+import Section from './Section';
 
 function App() {
   return (
